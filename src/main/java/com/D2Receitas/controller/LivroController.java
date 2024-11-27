@@ -108,7 +108,7 @@ public class LivroController {
         return "dashboard/editor/livrosPublicados";
     }
 
-    @GetMapping({"/dashboard/editor/baixarLivro/{id}", "/dashboard/administrador/baixarLivro/{id}"})
+    @GetMapping("/baixarLivro/{id}")
     public ResponseEntity<byte[]> baixarLivro(@PathVariable Long id) {
         try {
             Livro livro = livroRepository.findById(id)
