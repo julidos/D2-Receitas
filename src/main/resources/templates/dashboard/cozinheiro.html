@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <title>Painel do Cozinheiro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        header {
+            background-color: #f5a623;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .coziheiro-info p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        button {
+            padding: 13px 13px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff8800;
+            transform: translateY(-3px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        .logout-btn {
+            background-color: #d9534f;
+            margin-top: 20px;
+            width: 18%;
+        }
+
+        .logout-btn:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+
+<body>
+	<header>
+	        <a href="/dashboard/administrador">
+	            <div class="logo">
+	                <img src="./../../images/logo_d2.png" alt="Logo">
+	            </div>
+	        </a>
+
+	        <a href="">
+	            <form th:action="@{/logout}" method="post">
+	                <button type="submit" style="background-color: transparent; color: white; border-color: transparent;"><i class="bi-box-arrow-right"></i> Sair</button>
+	            </form>
+	        </a>
+	    </header>
+	    <br>
+        <h1>Bem-vindo, Cozinheiro(a)</h1>
+        <div class="container">
+        <div class="cozinheiro-info">
+            <p><strong>Usuário:</strong> <span th:text="${funcionario.username}"></span></p>
+            <p><strong>Data de Criação:</strong>
+                <span th:if="${funcionario.createdAt != null}"
+                    th:text="${#temporals.format(funcionario.createdAt, 'dd/MM/yyyy HH:mm')}">
+                </span>
+            </p>
+        </div>
+        <div class="button-container">
+            <a href="/dashboard/cozinheiro/receitas/adicionar" class="btn"><button>Adicionar Receita</button></a>
+            <a href="/dashboard/cozinheiro/receitas" class="btn"><button>Receitas</button></a>
+        </div>
+
+        <form th:action="@{/logout}" method="post">
+            <button type="submit" class="logout-btn">Sair</button>
+        </form>
+    </div>
+</main>
+</body>
+
+</html>
