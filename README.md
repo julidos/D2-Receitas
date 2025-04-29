@@ -9,8 +9,24 @@
 <p align="center">
   Sistema web desenvolvido com Spring Boot para gerenciamento de livros de receitas, ingredientes, categorias e restaurantes.
   <br>
-  A aplicação foi pensada para auxiliar equipes gastronômicas a organizarem suas degustações e materiais de referência de forma prática e eficiente.
+  Projeto final do curso de Análise e Desenvolvimento de Sistemas - Faculdade Senac DF 🎓.
 </p>
+
+<hr>
+
+<h2>🧠 Aprendizados</h2>
+
+<p>
+  Este projeto foi essencial para consolidar diversos conhecimentos de back-end Java em um contexto de aplicação realista.
+</p>
+
+<ul>
+  <li>Compreensão aprofundada de <strong>relacionamentos JPA</strong> e mapeamentos complexos</li>
+  <li>Domínio sobre a estruturação de projetos Spring Boot em camadas limpas</li>
+  <li>Criação de rotinas assíncronas e uso de <strong>Data Transfer Objects (DTOs)</strong></li>
+  <li>Implementação de segurança robusta com Spring Security e perfis de usuários</li>
+  <li>Trabalho com <strong>relatórios PDF</strong> e exportação de dados</li>
+</ul>
 
 <hr>
 
@@ -49,22 +65,6 @@
   <li>Thymeleaf como motor de templates para renderização das páginas</li>
   <li>Geração de relatórios PDF usando <code>PDFService</code> customizado</li>
   <li>Mensagens de feedback para o usuário usando Thymeleaf + Bootstrap</li>
-</ul>
-
-<hr>
-
-<h2>🧠 Aprendizados</h2>
-
-<p>
-  Este projeto foi essencial para consolidar diversos conhecimentos de back-end Java em um contexto de aplicação realista.
-</p>
-
-<ul>
-  <li>Compreensão aprofundada de <strong>relacionamentos JPA</strong> e mapeamentos complexos</li>
-  <li>Domínio sobre a estruturação de projetos Spring Boot em camadas limpas</li>
-  <li>Criação de rotinas assíncronas e uso de <strong>Data Transfer Objects (DTOs)</strong></li>
-  <li>Implementação de segurança robusta com Spring Security e perfis de usuários</li>
-  <li>Trabalho com <strong>relatórios PDF</strong> e exportação de dados</li>
 </ul>
 
 <hr>
